@@ -1,5 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --base-100: #ffffff;
+    --base-200: #f8f9fd;
+    --base-300: #dfe5eb;
+    --base-content: #2B3148;
+    --base-content-secondary: #5c5b61;
+    --primary: #8B4DFF;
+    --primary-content: #ffffff;
+
+}
+
 body {
-    font-family: "Raleway", sans-serif
+    font-family: "Raleway", sans-serif;
+    min-height: 100svh;
+    background-color: var(--base-200);
+}
+
+.wrapper {
+    max-width: 80rem;
+    min-height: 100svh;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+.crowd-field {
+    width: 100%;
+    height: auto;
+    margin: 0 0 18svh;
+}
+
+.crowd-field img {
+    width: 60px;
+}
+
+.input-field {
+    width: 30%;
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+}
+
+#userInput {
+    width: 100%;
+    -moz-appearance: none;
+    padding: 1rem 4.5rem 1rem 3rem;
+    border: none;
+    outline: 1px solid #333;
+    border-radius: 10px;
+    background-color: var(--base-200);
+    transition: outline .3s ease-in-out;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--base-content-secondary);
+}
+
+#userInput:focus {
+    outline: 2px solid var(--primary);
+    border: none;
+    background-color: var(--base-100);
+}
+
+#userInput::placeholder {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--base-content-secondary);
+}
+
+.input-field span {
+    position: absolute;
+    right: 1rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.input-field svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--base-content-secondary);
+    position: absolute;
+    left: 1rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
