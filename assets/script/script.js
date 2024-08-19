@@ -1,7 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // See It Now Btn 
+    // see it button 
     document.getElementById("seeBtn").addEventListener("click", () => {
+        getImg();
+        showAll();
+    });
+
+    //see it now btn shortcut
+    document.addEventListener("keydown", (e) => {
+        if(e.key === "Enter") {
+            getImg();
+        showAll();
+        };
+    });
+
+    //get the image according to the entered number
+    function getImg() {
         const inputNum = parseInt(document.getElementById("userInput").value); //input value in number
         document.getElementById("imgField").innerHTML = ""; //clear previous img
         if (inputNum >= 1 && inputNum < 50) {
@@ -12,10 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             let closestNum = getClosestNum(inputNum);
             console.log(closestNum);
-        }
-
-        showAll();
-    });
+        };
+    };
 
     //get the closest number from the inputted number
     function getClosestNum(inputNum) {
@@ -49,5 +61,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("closeBtn").addEventListener("click", closeAll);
     document.getElementById("overlay").addEventListener("click", closeAll);
 
-
-})
+});
