@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("keydown", (e) => {
         if(e.key === "Enter") {
             getImg();
-        showAll();
+            showAll();
         };
     });
 
@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //close buttons
     document.getElementById("closeBtn").addEventListener("click", closeAll);
+    document.getElementById("closeIcon").addEventListener("click", closeAll);
     document.getElementById("overlay").addEventListener("click", closeAll);
 
 });

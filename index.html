@@ -56,11 +56,12 @@
     </main>
     <!-- output -->
     <section
-        class="hidden w-10/12 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#222222] p-5 border border-solid border-zinc-700 rounded-lg z-10 lg:w-auto lg:p-8" id="outputField">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="absolute -top-5 -right-5 fill-white bg-red-500 rounded-full p-1 h-8 w-8 cursor-pointer hover:bg-red-600" id="closeBtn"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        class="hidden w-11/12 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#222222] p-5 border border-solid border-zinc-700 rounded-lg z-10 lg:w-auto lg:p-8" id="outputField">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="hidden absolute -top-5 -right-5 fill-white bg-red-500 rounded-full p-1 h-8 w-8 cursor-pointer hover:bg-red-600 md:inline-block" id="closeIcon"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
         <div class="w-full" id="imgField"></div>
-        <p class="text-sm text-zinc-500 font-medium mt-2">This image represents [number] people look like</p>
-        <div class="mt-5">
+        <p class="text-sm text-zinc-500 font-medium mt-1">This image represents [number] people look like</p>
+        <div class="mt-5 text-right">
+            <button class="mr-4 py-2 px-6 rounded-lg text-zinc-100 border border-solid border-red-500 hover:bg-red-600 hover:border-red-600 md:hidden" id="closeBtn">Close</button>
             <button class="bg-[#393939] py-2 px-6 rounded-lg text-zinc-400 border border-solid border-zinc-600 hover:text-zinc-300 hover:border-zinc-500">Download</button>
         </div>
     </section>
