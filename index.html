@@ -33,21 +33,42 @@
     <main class="max-w-screen-xl mx-auto px-5">
         <section class="mt-12 lg:flex lg:justify-between lg:items-center lg:mt-32">
             <div class="max-w-lg md:mx-auto">
-                <h1 class="text-5xl font-bold text-zinc-50 md:text-center lg:text-6xl lg:text-left">See What a Million People Look Like</h1>
-                <p class="text-base text-zinc-500 font-medium mt-3 md:text-center lg:text-lg lg:text-left">Ever wonder what a million people look like? Now you can see it—not just a million, but any number of people</p>
-                <div class="w-11/12 absolute bottom-5 left-1/2 -translate-x-1/2 flex items-stretch justify-between gap-3 mt-7 md:max-w-lg lg:static lg:bottom-0 lg:left-0 lg:-translate-x-0 lg:justify-start">
-                        <input class="w-3/5 bg-[#393939] rounded-lg p-4 text-lg font-semibold text-zinc-50 placeholder:font-normal placeholder:text-base focus:outline focus:outline-2 focus:outline-[#E6533C] md:w-3/5" type="number" id="userInput" placeholder="Enter a Number">
-                    <button class="w-1/3 bg-[#E6533C] px-4 py-1 rounded-lg text-base text-white font-semibold md:px-8 md:first:py-3" id="seeBtn">See It Now</button>
+                <h1 class="text-5xl font-bold text-zinc-50 md:text-center lg:text-6xl lg:text-left">See What a Million
+                    People Look Like</h1>
+                <p class="text-base text-zinc-500 font-medium mt-3 md:text-center lg:text-lg lg:text-left">Ever wonder
+                    what a million people look like? Now you can see it—not just a million, but any number of people</p>
+                <!-- input container -->
+                <div
+                    class="w-11/12 fixed bottom-5 left-1/2 -translate-x-1/2 flex items-stretch justify-between gap-3 mt-7 md:max-w-lg lg:static lg:bottom-0 lg:left-0 lg:-translate-x-0 lg:justify-start">
+                    <input
+                        class="w-3/5 bg-[#393939] rounded-lg p-4 text-lg font-semibold text-zinc-50 placeholder:font-normal placeholder:text-base focus:outline focus:outline-2 focus:outline-[#E6533C] md:w-3/5"
+                        type="number" id="userInput" placeholder="Enter a Number">
+                    <button
+                        class="w-1/3 bg-[#E6533C] px-4 py-1 rounded-lg text-base text-white font-semibold md:px-8 md:first:py-3"
+                        id="seeBtn">See It Now</button>
                 </div>
             </div>
             <div class="w-full md:max-w-lg mx-auto mt-7">
-                <img class="w-full h-64 shadow-md rounded-lg md:h-80 lg:h-96" src="assets/images/people/17/17.jpg" alt="people">
+                <img class="w-full h-64 shadow-md rounded-lg md:h-80 lg:h-96" src="assets/images/people/17/17.jpg"
+                    alt="people">
             </div>
         </section>
-        <section>
-            <div class="crowd-field"></div>
-        </section>
     </main>
+    <!-- output -->
+    <section
+        class="hidden w-10/12 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#222222] p-5 border border-solid border-zinc-700 rounded-lg z-10 lg:w-auto lg:p-8" id="outputField">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="absolute -top-5 -right-5 fill-white bg-red-500 rounded-full p-1 h-8 w-8 cursor-pointer hover:bg-red-600" id="closeBtn"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        <div class="w-full" id="imgField">
+            <img src="assets/images/people/10/10.jpg" class="rounded-lg h-64" alt="">
+        </div>
+        <div class=" mt-5 flex justify-between items-center">
+            <p class="text-sm text-zinc-500 font-medium">This image represents [number] people look like</p>
+            <button class="bg-[#393939] py-2 px-6 rounded-lg text-zinc-400 border border-solid border-zinc-600 hover:text-zinc-300 hover:border-zinc-500">Download</button>
+        </div>
+    </section>
+    <!-- overlay -->
+    <div class="hidden absolute top-0 left-0 bottom-0 right-0 bg-[#393939/50] z-0 backdrop-blur-lg" id="overlay"></div>
+    <!-- script -->
     <script src="assets/script/script.js"></script>
 </body>
 
